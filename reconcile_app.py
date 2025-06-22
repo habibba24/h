@@ -1,12 +1,13 @@
 import streamlit as st
 from datetime import datetime
 import gspread
+import os
 from oauth2client.service_account import ServiceAccountCredentials
 
-# إعداد الاتصال بـ Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("/Users/hapipaweal/reconcile_gui.py/reconcile_gui.py/recoil-463722-13dc3498e30e.json", scope)
-client = gspread.authorize(creds)
+cred_path = os.path.join(os.path.dirname(__file__), "recoil-463722-13dc3498e30e.json")
+creds = ServiceAccountCredentials.from_json_keyfile_name(cred_path, scope)
+
 
 # افتح Google Sheet باستخدام الرابط
 sheet_url = "https://docs.google.com/spreadsheets/d/1RFT5RQSCqo1XBPg81yfix_TXVjVq_XzTv9EIeZLlw1M/edit?pli=1&gid=0#gid=0"
