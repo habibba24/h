@@ -1,14 +1,37 @@
 import streamlit as st
+import pandas as pd
 from datetime import datetime
-import gspread
+import os
 
-# تهيئة Session State
+# Page config
+st.set_page_config(page_title="تصالح؟", page_icon="🤝", layout="centered")
+
+# Excel logging function
+def log_response(response):
+    log_file = "responses.xlsx"
+    full_path = os.path.abspath(log_file)
+    #st.write(f"📁 Excel is saved at: {full_path}")  # Shows on the Streamlit app
+
+    now = datetime.now()
+    new_row = {
+        "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "time": now.strftime("%H:%M:%S"),
+        "response": response
+    }
+    if os.path.exists(log_file):
+        df = pd.read_excel(log_file)
+        df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+    else:
+        df = pd.DataFrame([new_row])
+    df.to_excel(log_file, index=False)
+
+# Session state initialization
 if 'show_message' not in st.session_state:
     st.session_state['show_message'] = True
 if 'response' not in st.session_state:
     st.session_state['response'] = None
 
-# تنسيق العنوان
+# Header styling
 st.markdown("""
     <style>
     .center-text {
@@ -18,10 +41,16 @@ st.markdown("""
         margin-top: 50px;
         margin-bottom: 30px;
     }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 20px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
-# عرض الرسالة الأولى
+# Show initial prompt
 def show_main_message():
     st.markdown('<div class="center-text">ممكن نتصالح؟</div>', unsafe_allow_html=True)
     col1, col2 = st.columns([1, 1])
@@ -38,7 +67,7 @@ def show_main_message():
             log_response("No")
             st.rerun()
 
-# عرض رد الفعل
+# Show result after user responds
 def show_response():
     if st.session_state['response']:
         st.success(" i miss you ,كلمني بقى يا أبو زين ❤️")
@@ -51,7 +80,7 @@ def show_response():
             st.session_state['response'] = None
             st.rerun()
 
-# التحكم في العرض
+# Logic control
 if st.session_state['show_message']:
     show_main_message()
 else:
