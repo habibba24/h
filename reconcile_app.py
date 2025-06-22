@@ -5,7 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # إعداد الاتصال بـ Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("/Users/hapipaweal/reconcile_gui.py/reconcile_gui.py/recoil-463722-78da108dcf50.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("/Users/hapipaweal/reconcile_gui.py/reconcile_gui.py/recoil-463722-13dc3498e30e.json", scope)
 client = gspread.authorize(creds)
 
 # افتح Google Sheet باستخدام الرابط
@@ -20,8 +20,7 @@ def log_response(response):
     now = datetime.now()
     row = [now.strftime("%Y-%m-%d %H:%M:%S"), now.strftime("%H:%M:%S"), response]
     sheet.append_row(row)
-    st.success("✅ تم تسجيل ردك في Google Sheets")
-
+    #st.success("✅ تم تسجيل ردك في Google Sheets")
 
 # تهيئة Session State
 if 'show_message' not in st.session_state:
@@ -77,4 +76,5 @@ if st.session_state['show_message']:
     show_main_message()
 else:
     show_response()
+
 
