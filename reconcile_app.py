@@ -1,26 +1,6 @@
 import streamlit as st
 from datetime import datetime
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-
-# إعداد الاتصال بـ Google Sheets
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("/habibba24/h/recoil-463722-3bd66cb8a76b.json", scope)
-client = gspread.authorize(creds)
-
-# افتح Google Sheet باستخدام الرابط
-sheet_url = "https://docs.google.com/spreadsheets/d/1RFT5RQSCqo1XBPg81yfix_TXVjVq_XzTv9EIeZLlw1M/edit?pli=1&gid=0#gid=0"
-sheet = client.open_by_url(sheet_url).sheet1
-
-# إعداد صفحة Streamlit
-st.set_page_config(page_title="تصالح؟", page_icon="🤝", layout="centered")
-
-# تسجيل الرد في Google Sheets
-def log_response(response):
-    now = datetime.now()
-    row = [now.strftime("%Y-%m-%d %H:%M:%S"), now.strftime("%H:%M:%S"), response]
-    sheet.append_row(row)
-    #st.success("✅ تم تسجيل ردك في Google Sheets")
 
 # تهيئة Session State
 if 'show_message' not in st.session_state:
