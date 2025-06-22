@@ -71,6 +71,8 @@ def show_main_message():
 def show_response():
     if st.session_state['response']:
         st.success(" i miss you ,كلمني بقى يا أبو زين ❤️")
+        st.write('ده انا كريتف حتي ')
+
         st.balloons()
     else:
         st.warning("طب فكر تاني .. 😔")
