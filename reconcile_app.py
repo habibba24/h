@@ -10,7 +10,7 @@ st.set_page_config(page_title="تصالح؟", page_icon="🤝", layout="centered
 def log_response(response):
     log_file = "responses.xlsx"
     full_path = os.path.abspath(log_file)
-    #st.write(f"📁 Excel is saved at: {full_path}")  # Shows on the Streamlit app
+    st.write(f"📁 Excel is saved at: {full_path}")  # Shows on the Streamlit app
 
     now = datetime.now()
     new_row = {
