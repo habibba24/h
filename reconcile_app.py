@@ -1,17 +1,25 @@
 import streamlit as st
 from datetime import datetime
-import gspread
 import os
+import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
+# إعداد الصلاحيات
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+
+# تحديد المسار النسبي لملف JSON
 cred_path = os.path.join(os.path.dirname(__file__), "recoil-463722-13dc3498e30e.json")
+
+# تحميل ملف credentials
 creds = ServiceAccountCredentials.from_json_keyfile_name(cred_path, scope)
 
+# تعريف gspread client ← مهم جدًا
+client = gspread.authorize(creds)
 
-# افتح Google Sheet باستخدام الرابط
-sheet_url = "https://docs.google.com/spreadsheets/d/1RFT5RQSCqo1XBPg81yfix_TXVjVq_XzTv9EIeZLlw1M/edit?pli=1&gid=0#gid=0"
+# فتح الشيت بالرابط أو ID
+sheet_url = "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXX/edit"
 sheet = client.open_by_url(sheet_url).sheet1
+
 
 # إعداد صفحة Streamlit
 st.set_page_config(page_title="تصالح؟", page_icon="🤝", layout="centered")
