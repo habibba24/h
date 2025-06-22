@@ -20,6 +20,8 @@ def log_response(response):
     now = datetime.now()
     row = [now.strftime("%Y-%m-%d %H:%M:%S"), now.strftime("%H:%M:%S"), response]
     sheet.append_row(row)
+    st.success("✅ تم تسجيل ردك في Google Sheets")
+
 
 # تهيئة Session State
 if 'show_message' not in st.session_state:
