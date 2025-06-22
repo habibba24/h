@@ -17,7 +17,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(cred_path, scope)
 client = gspread.authorize(creds)
 
 # فتح الشيت بالرابط أو ID
-sheet_url = "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXX/edit"
+sheet_url = "https://docs.google.com/spreadsheets/d/https://docs.google.com/spreadsheets/d/1RFT5RQSCqo1XBPg81yfix_TXVjVq_XzTv9EIeZLlw1M/edit?pli=1&gid=0#gid=0/edit"
 sheet = client.open_by_url(sheet_url).sheet1
 
 
