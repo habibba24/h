@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "recoil-463722",
+  "private_key_id": "78da108dcf507f0c2afa658ae84954a922879f24",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC113CIp+WlyLP9\nSlorVUnsA4CfspuADU7t9N9eu7XqFNLd6c6/3B94QomJvQBgGUeXgswNL5dWdEdL\nnBy2STlnwVZvcwYq80BZo8BcysWEMLcJGoMzVGbjOHPjyAie2KL1HJ96AGRiAWMG\nfNz21r8Sh7fLTIsDRnI+cCp6A4/43DJ8Kn40izVbGvymSY3Uy7tZDxpinsNBGnBE\nChAbNZzQluPRY30XR2379qHhBkaFq44ZT2bX3z2GrimI5uWr6Pc1PPbPyl4AMVk1\n9I44L8pxP6sdMnLZnZmFAl7u0UAYZwG8GUiBPa5yBOLPGJdYtDFGeDeZwPCUBf+Q\nvFkGN31ZAgMBAAECggEAFk+Vrh6zjZC/jL9XquNvC3cui+mVLLP1UDrwQSZU3qCp\ncrLiPCYc8ltvlqfK6P+RCiTxNlj1f5UKvlssJq17TqCpI0mAozpvVdBCpN/4Ngzo\nGETZfi3H5e8iQPtlG2BHNj3Jz2VG68Nxy/T8A4k7rmFaiqYclE1LbR/EBm5zdrwQ\neP7arbqcZbinJ4p+GMO4I7ZdCo//h5mfKnxzz45OslZMcAqJs9+FNRhNlZPboOBw\ngJqdcFppQmH3Y36GThz/SYeWQ7nBwYLpCYUjJbDLBBGezeDBbFjQDcbAo7xPHBIF\nfzPgHzNk3yP/EC5bIP6vFuD3C0SngduFupfGg9DjhQKBgQDu82LA/aSdkWGMfcjt\nrKut0IV/me+dJ56IjDtb3z3RJdirTJxv75ORw5hBUhS9kSzA0Nd0UNb5U2++R9Uu\np+9nsNmB531v68S7oo/X6ObIfGdsNmWZDYUCy+qX2DKNi3/YzmIQtcrWsyosQokd\n78QnNZIV/loRPJuGytLjectvYwKBgQDC0Ol/HTL/T5CYbPZ/QteYZFKxpScrtzLp\nJbBCMcbCQSwYzGEeNOA8/A2uVu2tGStQSk+0SZeLZNajXiu7Y4Hv1rDTpNZq/72v\nvarLrX4Ge02h1ad2+PJXB9TgEJKSkvrI/z71uxmR6QrYCSgO77V9Gz6DRmg3ezs9\nM+RkyJSzEwKBgHjp6f/0mbcuGOmpwOIcLSegS918/NZOdRdttp/PwI00FIbiFotB\n9S+ehU4QhfRDIR1U0KHIQnAZ+4KTANpCGpAi2n20sTHQYVX9dcJw1U+APClzAUhI\nohT/MO+zdClR/Nit3svL4h9wvBd3d8ERUfXxUsIUWmk8fQrhWYPIXtw3AoGAfhzx\nWrlTPxWJnDLFa2Kg4GTpZ1hrQBBrI6SjMma4rR21ZyQ/JmfCVZgxXw+k8q5dbK9+\nY05UjQctLzqSAs+K2PDZLVkC+OcvKyoT+6AG+jkt6zq9GvZTIuXN93Ki/8GoGR+q\n6TZCekMrIujihrDEgwV09VRJuMjMc3U5P8jdAgMCgYAB2IbhMwVWuuVnJLJG3tFM\nNPE4EjX4e5+BftIUzfxTWoPjAM/vJLywrVdfS9qqZyD9aRy7+YpsuilYKxAdRl4d\nQmzo1jtAtB+oqo1avYu5e++14+ikR33I/0e0Yb3ZoMDOtFNkHTS9jJHE65WxCcFT\nIIVxkTf2pprpO+PwjZOBYw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "streamlit-sheet-writer@recoil-463722.iam.gserviceaccount.com",
+  "client_id": "114615250955478035575",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/streamlit-sheet-writer%40recoil-463722.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
